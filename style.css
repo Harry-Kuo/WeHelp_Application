@@ -1,0 +1,114 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* 導覽列樣式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* 深灰色背景 */
+    padding: 10px 20px;
+}
+
+.logo{
+    color: white; /* 白色文字 */
+    font-size: 20px;
+}
+
+.nav-links {
+    list-style-type: none; /* 去掉項目符號 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 60px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* 白色文字 */
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555; /* 灰色懸停效果 */
+}
+
+.text_area {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 1200px; /* 最大寬度 */
+    margin: 40px auto; /* 居中 */
+}
+
+.title {
+    color: #007bff; /* 標題顏色 */
+    margin: 0 0 10px; /* 下邊距 */
+    font-size: 24px; /* 標題字型大小 */
+    border-bottom: 2px solid #007bff; /* 底部邊框 */
+    padding-bottom: 5px; /* 底部內邊距 */
+}
+
+.content {
+    display: flex; /* 使用Flexbox進行排列 */
+    margin-bottom: 50px; /* 每個區塊的下邊距 */
+}
+
+.subtitle {
+    width: 450px; /* 左側子標題的寬度 */
+    color: #333; /* 子標題顏色 */
+    white-space: nowrap; /* 防止文字換行 */
+    text-align: left; /* 確保文字靠左對齊 */
+   
+}
+
+.text {
+    flex: 1; /* 右側內容自動填滿剩餘空間 */
+    color: #666; /* 內容顏色 */
+}
+
+.back_to_top {
+    display:flex;
+    justify-content: flex-end;
+}
+
+/* 預設情況：影片並排顯示 */
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 當視窗寬度小於 1200px 時，影片改成一行一個 */
+@media (max-width: 1200px) {
+  .video-container {
+    flex-direction: column;
+    align-items: center; /* 讓影片居中對齊 */
+  }
+
+  .video-container iframe {
+    margin-bottom: 20px; /* 增加影片間距 */
+  }
+}
+
+@media (max-width: 700px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .subtitle {
+        width: 100%;
+    }
+}
